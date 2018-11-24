@@ -1,0 +1,29 @@
+.posts{
+    text-align: center;
+    letter-spacing: 0px;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h1{
+    text-align: center;
+}
+.post-category{
+    display: inline;
+    margin-right:150px;
+    background-color: aquamarine;
+}
+.post-time{
+    letter-spacing: -1px;
+    display: inline;
+    margin-left:150px
+}
+hr{
+    align-content: center;
+    width: 50%;
+}
+
+.guide{
+    text-align: center;
+    margin-top:25px;
+    margin-bottom: 25px;
+}
+
