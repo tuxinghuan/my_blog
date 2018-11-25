@@ -2,7 +2,7 @@
 {% block content %}
 <div class="posts">
     {% for post in post_list %}
-        <section class="post">
+        <div class="post-block">
             <header class="post-header">
                 <h2 class="post-title">{{ post.title }}</h2>
             </header>
@@ -10,14 +10,14 @@
                     <p>
                         {{ post.content }}
                         </br>
-                        <p class="post-category" >{{ post.category }}</p>
+                        <p class="post-category" >分类：{{ post.category }}</p>
                         <p class="post-time">
                         <b>Time</b>: <a>{{ post.date_time }}</a>
                         </p>
                     </p>
                 </div>
-        </section>
-        <hr>
+        </div>
+        
     {% endfor %}
 </div><!-- /.blog-post -->
 {% endblock %}

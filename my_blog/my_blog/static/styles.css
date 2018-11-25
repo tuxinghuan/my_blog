@@ -7,23 +7,57 @@ h1{
     text-align: center;
 }
 .post-category{
+    display: block;
     display: inline;
     margin-right:150px;
-    background-color: aquamarine;
+    position: relative;
+    top:90px;
 }
 .post-time{
     letter-spacing: -1px;
     display: inline;
-    margin-left:150px
+    margin-left:150px;
+    position:relative;
+    top:90px;
 }
-hr{
-    align-content: center;
-    width: 50%;
-}
+
 
 .guide{
     text-align: center;
     margin-top:25px;
     margin-bottom: 25px;
 }
+
+.guide_list{
+    float: none;
+}
+.guide li{
+    display: inline;
+}
+
+.guide a:link,a:visited{
+    text-decoration: none;
+    background-color:black;
+    color: #ffffff;
+    padding:7px;
+    margin: -3px;
+    width:120px;
+}
+
+.guide a:hover,a:active{
+    background-color:white;
+    color:black;
+}
+
+.post-block{
+    width: 580px;
+    height:200px;
+    background-color: black;
+    color:white;
+    margin-left: auto;
+    margin-right:auto;
+    padding-bottom: 20px;
+}
+
+
 
