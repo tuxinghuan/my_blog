@@ -11,8 +11,7 @@ class Article(models.Model):
         return self.title  #tell the objects how to show itself(default is '',here is self.title)
     
     def get_absolute_url(self):
-
-        return reverse('model-detail-view', args=[str(self.id)])
+        return reverse('views.ArticleListView.as_view()', args=[str(self.id)])
         
     class Meta:
         ordering=['-date_time']

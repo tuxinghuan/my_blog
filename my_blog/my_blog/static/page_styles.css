@@ -22,12 +22,6 @@ h1{
     left:140px;
 }
 
-.post-block a:link,a:visited{
-    text-decoration: none;
-    color:white;
-}
-
-
 .guide{
     text-align: center;
     margin-top:25px;
@@ -56,7 +50,6 @@ h1{
 }
 
 .post-block{
-    display: block;
     width: 580px;
     height:200px;
     background-color: black;
@@ -65,22 +58,3 @@ h1{
     margin-right:auto;
     padding-bottom: 20px;
 }
-
-.pagination{
-    color:black;
-    
-    text-align: center;
-    position: relative;
-    top: 10px;
-}
-
-.pagination a{
-    color:white;
-    text-decoration: none;
-    background-color: black;
-    padding: 5px;
-
-}
-
-
-

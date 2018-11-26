@@ -1,32 +1,37 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
-    <title>tuxinghuan's blog</title>
-</head>
-<body>
-<div>
-    <div>
-        <div>
-            <div class="guide">
-            <ul>
-                <li><a href="#" >关于我</a></li>
-                <li><a href="#" >所有博客</a></li>
-                <li><a href="#" >给我留言</a></li>
-            </ul>
-            </div>
-            
+{% extends "home.html" %}
+{% block content %}
+<div class="posts">
+    {% for post in post_list %}
+        <div class="post-block">
+                <a class="article_link" href="{% url "detail" id=post.id %}"><h2 class="post-title">{{ post.title }}</h2></a>
+                <div class="post-description">
+                    <p>
+                        {{ post.content }}
+                        </br>
+                        <div class="post-category_time">
+                        <p class="post-category" >分类：{{ post.category }}</p>
+                        <p class="post-time">{{ post.date_time }}</p>
+                        </div>
+                    </p>
+                </div>
         </div>
-    </div>
+   
+    {% endfor %}
 
-    <div>
-        <div>
-        <div class="post-content">
-            {% block content %}
-            {% endblock %}
-    </div>
 </div>
+</div><!-- /.blog-post -->
+<div class="pagination">
+    <span class="step-links">
+        {% if post_list.has_previous %}
+            <a href="?page={{ post_list.previous_page_number }}">previous</a>
+        {% endif %}
 
-</body>
-</html>
+        <span class="current">
+            Page {{ post_list.number }} of {{ post_list.paginator.num_pages }}.
+        </span>
+
+        {% if post_list.has_next %}
+            <a href="?page={{ post_list.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+{% endblock %}

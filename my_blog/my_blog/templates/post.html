@@ -1,0 +1,18 @@
+{% extends "home2.html" %}
+{% block content %}
+<div class="posts">
+        <div class="post-block">
+                <h2 class="post-title">{{ post.title }}</h2>
+                <div class="post-description">
+                    <p>
+                        {{ post.content }}
+                        </br>
+                        <div class="post-category_time">
+                        <p class="post-category" >分类：{{ post.category }}</p>
+                        <p class="post-time">{{ post.date_time }}</p>
+                        </div>
+                    </p>
+                </div>
+        </div>
+</div><!-- /.blog-post -->
+{% endblock %}
