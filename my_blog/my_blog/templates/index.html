@@ -2,19 +2,19 @@
 {% block content %}
 <div class="posts">
     {% for post in post_list %}
-        <div class="post-block">
-                <a class="article_link" href="{% url "detail" id=post.id %}"><h2 class="post-title">{{ post.title }}</h2></a>
-                <div class="post-description">
-                    <p>
-                        {{ post.content }}
-                        </br>
-                        <div class="post-category_time">
-                        <p class="post-category" >分类：{{ post.category }}</p>
-                        <p class="post-time">{{ post.date_time }}</p>
-                        </div>
-                    </p>
-                </div>
-        </div>
+        <div class="post-preview">
+            <a href="{% url "detail" id=post.id %}">
+              <h2 class="post-title">
+                {{post.title}}
+              </h2>
+              <h3 class="post-subtitle">
+                {{post.content}}
+              </h3>
+            </a>
+            <p class="post-meta">
+              {{post.time}}
+          </div>
+          <hr>
    
     {% endfor %}
 
