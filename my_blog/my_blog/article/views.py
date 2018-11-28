@@ -8,7 +8,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def home(request):
         posts = Article.objects.all()  #获取全部的Article对象
-        paginator = Paginator(posts, 2)
+        paginator = Paginator(posts, 3)
         page=request.GET.get('page')
         try:
                 post_list= paginator.page(page)
@@ -18,7 +18,6 @@ def home(request):
         except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
                 post_list= paginator.page(paginator.num_pages)
-
         return render(request, 'index.html', {'post_list' : post_list})
 
 def detail(request,id):

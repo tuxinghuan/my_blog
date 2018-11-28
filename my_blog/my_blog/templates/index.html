@@ -23,15 +23,21 @@
 <div class="pagination">
     <span class="step-links">
         {% if post_list.has_previous %}
-            <a href="?page={{ post_list.previous_page_number }}">previous</a>
+            <a class="btn btn-default" href="?page={{ post_list.previous_page_number }}" role="button">previous</a>
         {% endif %}
 
-        <span class="current">
-            Page {{ post_list.number }} of {{ post_list.paginator.num_pages }}.
-        </span>
+       {% for page_number in post_list.paginator.page_range %}
+            {% if page_number != post_list.number %}
+                    <a class="btn btn-default" href="?page={{ page_number }}" role="button">{{ page_number }}</a>
+            {% else %}
+                    <b>{{ page_number }}</b>
+            {% endif %}
+            {% endfor %}
+            
+
 
         {% if post_list.has_next %}
-            <a href="?page={{ post_list.next_page_number }}">next</a>
+            <a class="btn btn-default" href="?page={{ post_list.next_page_number }}" role=>next</a>
         {% endif %}
     </span>
 {% endblock %}
