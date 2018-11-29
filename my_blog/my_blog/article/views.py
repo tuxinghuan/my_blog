@@ -27,3 +27,13 @@ def detail(request,id):
                 raise Http404
         return render(request,'post.html',{'post':post})
 
+def archives(request):
+        dates=Article.objects.datetimes('date_time','month',order='DESC')
+        return render(request,'home.html',{'dates':dates})
+
+
+def AboutMe(request):
+        return render(request,'AboutMe.html')
+
+
+

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Article(models.Model):
     title=models.CharField(max_length=100)    #blog's topic
-    category=models.ForeignKey(max_length=50,blank=True) #blog's lable
+    category=models.CharField(max_length=50,blank=True) #blog's lable
     date_time=models.DateTimeField(auto_now_add=True)  #blog's date
     content=models.TextField(blank=True,null=True)     #blog's content
 
