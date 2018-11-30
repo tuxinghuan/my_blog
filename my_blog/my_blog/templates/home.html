@@ -52,7 +52,7 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="col-lg-6 col-md-10 mx-auto">
             <div class="site-heading">
               <span class="subheading">功唐不捐，玉汝于成</span>
             </div>
@@ -64,23 +64,36 @@
     <!-- Main Content -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="col-lg-9  ">
           <div class="post-preview">
             {% block content %}
             {% endblock %}
-          <!-- Pager -->
-          
+          </div>
         </div>
+          <!-- Pager -->
+        <div class="col-lg-3  ">
+        <table class='table-hover'>
+        <thread>
+        <tr><th>归档</th></tr>
+        </thead>
+        <tbody>
+        <tr><td><a href=""><button class="btn btn-primary" type="button">
+                  Messages <span class="badge">4</span>
+          </button></td></tr>
+        </tbody>
+        </table>
+        </div>
+            
+        
       </div>
     </div>
-
     <hr>
 
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="col-lg-6 col-md-10 mx-auto">
             <ul class="list-inline text-center">
               <li class="list-inline-item">
                 <a href="#">
