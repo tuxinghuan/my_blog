@@ -14,7 +14,7 @@
             <p class="post-meta">
               {{post.time}}
           </div>
-          <p  class="post-preview">分类：<span class="btn btn-success">{{post.category}}</span></p>
+          <p  class="post-preview">分类：<span class="label label-default">{{post.category}}</span></p>
           <hr>  
     {% endfor %}
 
@@ -37,7 +37,7 @@
 
 
         {% if post_list.has_next %}
-            <a class="btn btn-default" href="?page={{ post_list.next_page_number }}" role=>next</a>
+            <a class="btn btn-default" href="?page={{ post_list.next_page_number }}" role="button">next</a>
         {% endif %}
     </span>
 {% endblock %}
